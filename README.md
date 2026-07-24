@@ -57,6 +57,4 @@ Through this project I learned:
 ## Author
 
 -Eyad
-## Author
 
-**Eyad*
