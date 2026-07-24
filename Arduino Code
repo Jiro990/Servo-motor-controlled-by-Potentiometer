@@ -1,0 +1,20 @@
+##Arduino Code
+
+#include <Servo.h>
+
+Servo myServo;
+
+const int servoPin = 9;
+const int potPin = A0;
+
+void setup() {
+  myServo.attach(servoPin);
+}
+
+void loop() {
+  int potValue = analogRead(potPin);          // Read potentiometer (0-1023)
+  int angle = map(potValue, 0, 1023, 0, 180); // Convert to angle (0-180)
+
+  myServo.write(angle);                       // Move servo
+  delay(15);                                  // Small delay
+}
